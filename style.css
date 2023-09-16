@@ -7,7 +7,7 @@
 .main{
     height: 707px;
     width: 1535px;
-    background-image: url(/img/bg-1.png);
+    background-image: url(img/bg-1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,7 +48,7 @@
     > #sun{
         height: 100px;
         width: 100px;
-        background-image: url(/img/sun2.png);
+        background-image: url(img/sun2.png);
         background-position: 6px 6px;
         background-size: contain;
         background-repeat: no-repeat;
@@ -67,7 +67,7 @@
     > #moon{
         height: 100px;
         width: 100px;
-        background-image: url(/img/moon.png);
+        background-image: url(img/moon.png);
         background-position: 6px 6px;
         background-size: contain;
         background-repeat: no-repeat;
@@ -189,7 +189,7 @@
         top: 170px;
         left: 47%;
         display: none;
-        background-image: url(/img/bell.png);
+        background-image: url(img/bell.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;

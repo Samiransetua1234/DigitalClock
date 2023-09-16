@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+        <div id="sun"></div>
+        <div id="moon"></div>
+        <div class="bell"></div>
+      <!-- clock -->
+      <div class="clock">
+        <div class="time">
+          <span class="st" id="hr"><b>00</b> : </span>
+          <span class="st" id="min"><b>00</b> : </span>
+          <span class="st" id="sec"><b>00</b> </span>
+          <span id="xyz"> AM</span>
+        </div>
+        <div class="date">
+          <span class="dt" id="day"><b>00</b> DAY</span>
+          <span class="dt" id="mon"><b>00</b> MON</span>
+          <span class="dt" id="year"><b>0000</b> YEAR</span>
+        </div>
+      </div>
+      <!-- StopWatch -->
+      <div class="stopWatch">
+        <div class="time">
+          <span class="st" id="m"><b>00</b> : </span>
+          <span class="st" id="s"><b>00</b></span>
+          <span class="st" id="ms">.<b>00</b></span>
+        </div>
+      </div>
+      <!-- Timer -->
+      <div class="timer">
+        <div class="time">
+          <input type="number" class="st" id="thr" placeholder="00" min="0" >hr
+          <input type="number" class="st" id="tmin" placeholder="00" min="0" max="59" >min
+          <input type="number" class="st" id="tsec" placeholder="00" min="0" max="59">sec
+          <audio src="/audio/alarm_beep-clock-165474.mp3" id="tmusic"></audio>
+        </div>
+      </div>
+      <!-- alerm -->
+      <div class="alerm">
+        <div class="time">
+          <input type="number" class="al" id="ahr" placeholder="00" min="0" max="12"> hr
+          <input type="number" class="al" id="amin" placeholder="00" min="0" max="59" > min
+          <span class="al">
+            <select name="abc" id="f">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </span>
+        </div>
+        <audio src="/audio/alarm-clock-short-6402.mp3" id="amusic"></audio>
+        <div class="date">
+          <input type="number" class="al" id="aday" placeholder="00" >DAY
+          <input type="number" class="al" id="amon" placeholder="00" >MON
+          <input type="number" class="al" id="ayr" placeholder="0000" >YEAR
+        </div>
+      </div>
+      <div class="btns">
+        <button class="btn" id="sw">Stop Watch</button>
+        <button class="btn" id="tmr">Timer</button>
+        <button class="btn" id="alrm">Alerm</button>
+      </div>
+      <div class="sbtn">
+        <button class="btn" id="start">Start</button>
+        <button class="btn" id="stop">Stop</button>
+        <button class="btn" id="reset">Reset</button>
+      </div>
+      <div class="tbtn">
+        <button class="btn" id="set">Set Timer</button>
+      </div>
+      <div class="albtn">
+        <button class="btn" id="setalrm">Set Alerm</button>
+      </div>
+    </div>
+    <script src="clock.js">
+      
+    </script>
+  </body>
+</html>

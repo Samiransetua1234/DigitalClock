@@ -1,0 +1,343 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    height: 707px;
+    width: 1535px;
+    background-image: url(/img/bg-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    > .clock{
+        position: absolute;
+        height: 200px;
+        width: 500px;
+        background-color: rgba(169, 168, 168, 0.670);
+        z-index: 1;
+        top: 50%;
+        left: 35%;
+        
+        text-align: center;
+        font-family: 'Handjet', sans-serif;
+        font-weight: 600;
+        padding: 20px;
+        border: 10px groove black;
+        border-radius: 15px;
+        > .time{
+            font-size: 80px;
+            margin-bottom: 3px;
+            .st > b{
+                background-color: rgba(255, 255, 255, 0.485);
+            }
+        }
+        > .date{
+            font-size: 40px;
+            margin-top: 3px;
+            .dt > b{
+                background-color: rgba(255, 255, 255, 0.485);
+            }
+
+        }
+
+
+    }
+    > #sun{
+        height: 100px;
+        width: 100px;
+        background-image: url(/img/sun2.png);
+        background-position: 6px 6px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 2;
+        animation-name: sunmoonAnim;
+        animation-timing-function: linear;
+        animation-duration: 60s;
+        animation-delay: 0ms;
+        animation-iteration-count: infinite;
+    }
+    
+    > #moon{
+        height: 100px;
+        width: 100px;
+        background-image: url(/img/moon.png);
+        background-position: 6px 6px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 3;
+        animation-name: sunmoonAnim;
+        animation-timing-function: linear;
+        animation-duration: 60s;
+        animation-delay: 0ms;
+        animation-iteration-count: infinite;
+    }
+    > .stopWatch{
+        position: absolute;
+        height: 200px;
+        width: 500px;
+        background-color: rgba(169, 168, 168, 0.670);
+        z-index: 3;
+        top: 50%;
+        left: 35%;
+        text-align: center;
+        font-family: 'Handjet', sans-serif;
+        font-weight: 600;
+        padding: 20px;
+        border: 10px groove black;
+        border-radius: 15px;
+        display: none;
+        > .time{
+            font-size: 55px;
+            margin: 25px 0;
+            .st > b{
+                background-color: rgba(255, 255, 255, 0.485);
+            }
+            #ms{
+                color: red;
+            }
+        }
+
+    }
+
+    > .timer{
+        position: absolute;
+        height: 200px;
+        width: 500px;
+        background-color: rgba(169, 168, 168, 0.670);
+        z-index: 3;
+        top: 50%;
+        left: 35%;
+        text-align: center;
+        font-family: 'Handjet', sans-serif;
+        font-weight: 600;
+        padding: 20px;
+        border: 10px groove black;
+        border-radius: 15px;
+        display: none;
+        > .time{
+            font-size: 40px;
+            margin: 25px 0;
+            .st{
+                margin: auto;
+                height: 40px;
+                width: 50px;
+                font-family: "Handjet";
+                font-size: 40px;
+                border: none;
+            }
+        }
+
+    }
+
+    > .alerm{
+        position: absolute;
+        height: 200px;
+        width: 500px;
+        background-color: rgba(169, 168, 168, 0.670);
+        z-index: 3;
+        top: 50%;
+        left: 35%;
+        text-align: center;
+        font-family: 'Handjet', sans-serif;
+        font-weight: 600;
+        padding: 20px;
+        border: 10px groove black;
+        border-radius: 15px;
+        display: none;
+        > .time , .date{
+            font-size: 40px;
+            margin: 20px 0;
+            .al{
+                margin: auto;
+                height: 40px;
+                width: 60px;
+                font-family: "Handjet", sans-serif;
+                font-size: 40px;
+                border: none;
+
+                > #f{
+                    font-family: 'Handjet', sans-serif;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+            }
+
+            #ayr{
+                width: 90px;
+            }
+
+            
+        }
+        
+
+    }
+    >.bell{
+        
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        z-index: 4;
+        top: 170px;
+        left: 47%;
+        display: none;
+        background-image: url(/img/bell.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation-name: ring;
+        animation-duration: 70ms;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+    }
+    > .btns, .sbtn, .tbtn, .albtn{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 50px;
+        width: 500px;
+        padding: 10px 25px;
+        text-align: center;
+        position: absolute;
+        top: 80%;
+        left: 35%;
+    }
+    .btn{
+        background-color: red;
+        padding: 1px 0;
+        width: 80px;
+        font-weight: bold;
+        color: white;
+        border-radius: 7px;
+        
+    }
+    >.btns{
+        >.btn{
+            background-color: blue;
+        }
+
+        display: flex;
+    }
+    >.sbtn{
+        
+        display: none;
+    }
+    >.tbtn{
+        display: none;
+        justify-content: center;
+    }
+    >.albtn{
+        display: none;
+        justify-content: center;
+    }
+}
+
+
+
+@keyframes sunmoonAnim {
+    0%{
+        transform: translate(0, 220px);
+    }
+    5%{
+        transform: translate( 72px,202px);
+        
+    }
+    10%{
+        transform: translate(144px,184px);
+        
+    }
+    15%{
+        transform: translate( 216px,166px);
+        
+    }
+    20%{
+        transform: translate( 288px,148px);
+        
+    }
+    25%{
+        transform: translate( 360px,130px);
+        
+    }
+    30%{
+        transform: translate(432px,112px);
+        
+    }
+    35%{
+        transform: translate( 504px,94px);
+        
+    }
+    40%{
+        transform: translate( 576px,76px);
+        
+    }
+    45%{
+        transform: translate( 648px,58px);
+        
+    }
+    50%{
+        transform: translate(720px, 40px);
+        
+    }
+    55%{
+        transform: translate(792px, 58px);
+        
+    }
+    60%{
+        transform: translate(864px, 76px);
+        
+    }
+    65%{
+        transform: translate(936px, 94px);
+        
+    }
+    70%{
+        transform: translate(1008px, 112px);
+        
+    }
+    75%{
+        transform: translate(1080px, 130px);
+        
+    }
+    80%{
+        transform: translate(1152px, 148px);
+        
+    }
+    85%{
+        transform: translate(1224px, 166px);
+        
+    }
+    90%{
+        transform: translate(1296px, 184px);
+        
+    }
+    95%{
+        transform: translate(1368px, 202px);
+        
+    }
+    100%{
+        transform: translate( 1435px, 220px);
+        
+    }
+}
+
+@keyframes ring{
+    0%{
+        transform: rotateZ(-30deg);
+    }
+    50%{
+        transform: rotateZ(30deg);
+    }
+    100%{
+        transform: rotateZ(-30deg);
+    }
+}

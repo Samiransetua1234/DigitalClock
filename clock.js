@@ -74,8 +74,8 @@ setInterval(() => {
     if ((timeArr[0] >= 6 && x[1] === "PM") ||(timeArr[0] <6 && x[1] ==="AM") ||(timeArr[0]==12 && x[1] == 'AM') ) {
         document.querySelector("#sun").style.display = "none"
         document.querySelector(".main").style.backgroundImage ="url(img/nightbg.png)"
-        
         document.querySelector("#moon").style.display ="inline-block"
+        
     }else if ((timeArr[0] >= 6 && x[1] === "AM") || (timeArr[0] <6 && x[1] ==="PM")||(timeArr[0]==12 && x[1]=='PM')) {
         document.querySelector(".main").style.backgroundImage ="url(img/bg-1.png)"
         document.querySelector("#moon").style.display = "none"

@@ -48,7 +48,7 @@
     > #sun{
         height: 100px;
         width: 100px;
-        background-image: url(/img/sun2.png);
+        background-image: url(img/sun2.png);
         background-position: 6px 6px;
         background-size: contain;
         background-repeat: no-repeat;
@@ -67,7 +67,7 @@
     > #moon{
         height: 100px;
         width: 100px;
-        background-image: url(/img/moon.png);
+        background-image: url(img/moon.png);
         background-position: 6px 6px;
         background-size: contain;
         background-repeat: no-repeat;
